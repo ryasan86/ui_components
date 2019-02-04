@@ -4,5 +4,13 @@
   "main": "index.js",
   "repository": "git@github.com:ryasan86/ui_components.git",
   "author": "Ryan Santos <ryansantos86@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0",
+    "sass": "^1.17.0"
+  },
+  "scripts": {
+    "start": "parcel *.html",
+    "build": "parcel build index.html"
+  }
 }
