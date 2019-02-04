@@ -1,0 +1,8 @@
+{
+  "name": "ui_components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ryasan86/ui_components.git",
+  "author": "Ryan Santos <ryansantos86@gmail.com>",
+  "license": "MIT"
+}
