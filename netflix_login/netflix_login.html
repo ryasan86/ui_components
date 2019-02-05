@@ -9,21 +9,22 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="header"></div>
+      <div class="header">
+        <img src="./images/netflix.svg">
+      </div>
 
       <div class="login">
         <form class="signin-form">
           <h1 class="title">Sign In</h1>
 
           <div class="field">
-            <input type="text" required/>
+            <input type="text" class="text-input" required/>
             <span class="floating-label">Email address or phone number</span>
           </div>
-          
 
           <div class="field">
-            <input type="password" required/>
-            <span class="floating-label">Password</span>
+            <input type="password" class="text-input" required/>
+            <span class="floating-label test">Password</span>
           </div>
 
           <button class="signin-btn">Sign In</button>
@@ -45,5 +46,7 @@
 
       <div class="footer"></div>
     </div>
+
+    <script src="./netflix.js"></script>
   </body>
 </html>
