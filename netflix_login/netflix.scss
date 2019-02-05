@@ -22,7 +22,17 @@ body {
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     linear-gradient(to top, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.5)),
-    url(./images/US-en-20190128-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    url(https://i.postimg.cc/NjHjKtG4/US-en-20190128-popsignuptwoweeks-perspective-alpha-website-large.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .wrapper {
@@ -90,8 +100,17 @@ body {
       margin-bottom: 50px;
       position: absolute;
       color: $font_color;
+      img {
+        width: 20px;
+        height: 20px;
+        vertical-align: center;
+      }
       p {
         margin: 10px 0 0 0;
+        display: block;
+      }
+      a {
+        color: white;
       }
     }
   }
@@ -138,4 +157,23 @@ body {
   width: 100%;
   flex-shrink: 0;
   background: rgba(0, 0, 0, 0.84);
+  padding: 20px 30px;
+  color: $font_color;
+  .terms {
+    margin-top: 30px;
+    a {
+      font-size: 12px;
+      padding-right: 100px;
+    }
+  }
+  select {
+    margin-top: 30px;
+    height: 40px;
+    background: black;
+    border: 1px solid red;
+    color: $font_color;
+    outline: none;
+    border-radius: $border_radius;
+    padding: 10px 20px;
+  }
 }

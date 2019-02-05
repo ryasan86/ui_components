@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Netflix Login</title>
+    <title>Netflix Login Demo</title>
     <link rel="stylesheet" href="./netflix.scss" />
   </head>
   <body>
     <div class="wrapper">
       <div class="header">
-        <img src="./images/netflix.svg">
+        <img src="./images/netflix.svg" />
       </div>
 
       <div class="login">
@@ -18,12 +18,12 @@
           <h1 class="title">Sign In</h1>
 
           <div class="field">
-            <input type="text" class="text-input" required/>
+            <input type="text" class="text-input" required />
             <span class="floating-label">Email address or phone number</span>
           </div>
 
           <div class="field">
-            <input type="password" class="text-input" required/>
+            <input type="password" class="text-input" required />
             <span class="floating-label test">Password</span>
           </div>
 
@@ -38,13 +38,25 @@
           </div>
 
           <div class="onboarding">
+            <img src="./images/facebook.svg" alt="facebook" />
             <small>Login with facebook</small>
             <p>New to Netflix? <a>Sign up now.</a></p>
           </div>
         </form>
       </div>
 
-      <div class="footer"></div>
+      <div class="footer">
+        <p class="questions">Questions? Call 1-866-579--7172</p>
+        <div class="terms">
+          <a>Gift Card Terms</a>
+          <a>Terms of Use</a>
+          <a>Privacy Statement</a>
+        </div>
+        <select>
+          <option value="english">English</option>
+          <option value="espanol">Espanol</option>
+        </select>
+      </div>
     </div>
 
     <script src="./netflix.js"></script>

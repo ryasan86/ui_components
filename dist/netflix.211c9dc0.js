@@ -176,7 +176,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./images\\US-en-20190128-popsignuptwoweeks-perspective_alpha_website_large.jpg":[["US-en-20190128-popsignuptwoweeks-perspective_alpha_website_large.7bc132e4.jpg","netflix_login/images/US-en-20190128-popsignuptwoweeks-perspective_alpha_website_large.jpg"],"netflix_login/images/US-en-20190128-popsignuptwoweeks-perspective_alpha_website_large.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -203,7 +203,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59462" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62785" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
