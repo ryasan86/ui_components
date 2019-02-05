@@ -1,13 +1,5 @@
 @import './variables.scss';
 
-%extend {
-  top: 8px;
-  bottom: 10px;
-  left: 20px;
-  font-size: 11px;
-  opacity: 1;
-}
-
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -46,7 +38,7 @@ a {
 .header {
   width: 100%;
   padding: 20px 40px;
-  img {
+  svg {
     width: 160px;
   }
 }
@@ -100,10 +92,19 @@ a {
       margin-bottom: 50px;
       position: absolute;
       color: $font_color;
-      img {
-        width: 20px;
-        height: 20px;
-        vertical-align: center;
+      div {
+        display: flex;
+        align-items: center;
+        .icon {
+          display: flex;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        small {
+          padding-left: 5px;
+        }
       }
       p {
         margin: 10px 0 0 0;
@@ -136,7 +137,7 @@ a {
       @extend %extend;
     }
     &.invalid {
-      border-bottom: 2px solid orangered;
+      border-bottom: 2px solid $error;
     }
   }
 
@@ -147,6 +148,13 @@ a {
     top: 18px;
     transition: 0.2s ease all;
     color: $font_color;
+  }
+
+  .error-message {
+    color: $error;
+    margin: 0;
+    font-size: 13px;
+    width: 100%;
   }
 }
 

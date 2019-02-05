@@ -43,7 +43,7 @@ a:hover {
   width: 100%;
   padding: 20px 40px;
 }
-.header img {
+.header svg {
   width: 160px;
 }
 
@@ -99,10 +99,19 @@ a:hover {
   position: absolute;
   color: #989897;
 }
-.login .signin-form .onboarding img {
+.login .signin-form .onboarding div {
+  display: flex;
+  align-items: center;
+}
+.login .signin-form .onboarding div .icon {
+  display: flex;
+}
+.login .signin-form .onboarding div .icon svg {
   width: 20px;
   height: 20px;
-  vertical-align: center;
+}
+.login .signin-form .onboarding div small {
+  padding-left: 5px;
 }
 .login .signin-form .onboarding p {
   margin: 10px 0 0 0;
@@ -137,6 +146,12 @@ a:hover {
   top: 18px;
   transition: 0.2s ease all;
   color: #989897;
+}
+.field .error-message {
+  color: orangered;
+  margin: 0;
+  font-size: 13px;
+  width: 100%;
 }
 
 .footer {

@@ -106,14 +106,26 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"netflix_login/netflix.js":[function(require,module,exports) {
 var textInputs = document.querySelectorAll('.text-input');
+var errors = {
+  text: 'please enter a valid email',
+  password: 'password must be between 4 and 60 characters long'
+};
 
 function toggleValidInput(e) {
   var length = e.target.value.length;
+  var field = this.parentElement;
+  var queryP = field.querySelector('p');
 
-  if (length < 4 || length > 60) {
+  if ((length < 4 || length > 60) && !queryP) {
+    var p = document.createElement('p');
+    var type = this.getAttribute('type');
     this.classList.add('invalid');
-  } else {
+    p.classList.add('error-message');
+    p.textContent = errors[type];
+    field.appendChild(p);
+  } else if (length >= 4 && length <= 60 && queryP) {
     this.classList.remove('invalid');
+    queryP && queryP.remove();
   }
 }
 
@@ -147,7 +159,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62785" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54899" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
