@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Netflix Login</title>
-    <link rel="stylesheet" href="./netflix_login.scss">
-</head>
-<body>
-    <h2>Netflix Login</h2>
-</body>
+    <link rel="stylesheet" href="./netflix.scss" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header"></div>
+
+      <div class="login">
+        <form class="signin-form">
+          <h1 class="title">Sign In</h1>
+
+          <div class="field">
+            <input type="text" required/>
+            <span class="floating-label">Email address or phone number</span>
+          </div>
+          
+
+          <div class="field">
+            <input type="password" required/>
+            <span class="floating-label">Password</span>
+          </div>
+
+          <button class="signin-btn">Sign In</button>
+
+          <div class="action-group">
+            <label for="remember-me">
+              <input type="checkbox" class="checkbox" id="remember-me" />
+              Remember me
+            </label>
+            <a>Need Help?</a>
+          </div>
+
+          <div class="onboarding">
+            <small>Login with facebook</small>
+            <p>New to Netflix? <a>Sign up now.</a></p>
+          </div>
+        </form>
+      </div>
+
+      <div class="footer"></div>
+    </div>
+  </body>
 </html>
