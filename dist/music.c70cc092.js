@@ -106,6 +106,20 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"music_landing/music.js":[function(require,module,exports) {
 var navBar = document.querySelector('.nav-bar');
+var albums = document.querySelectorAll('.album');
+window.addEventListener('scroll', function () {
+  window.scrollY > 0 ? navBar.style.background = 'rgba(0, 0, 0, 0.5)' : navBar.style.background = 'transparent';
+});
+albums.forEach(function (album) {
+  album.addEventListener('mouseenter', function () {
+    var overlay = this.firstElementChild;
+    overlay.style.display = 'block';
+  });
+  album.addEventListener('mouseleave', function () {
+    var overlay = this.firstElementChild;
+    overlay.style.display = 'none';
+  });
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -133,7 +147,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59298" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50647" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

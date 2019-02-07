@@ -1,4 +1,4 @@
-.hero-wrap .hero-text-container {
+.albums-wrap .albums .album .overlay .content, .hero-wrap .hero-text-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
 }
 
 .nav-bar {
-  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
   color: white;
   position: fixed;
   width: 100%;
@@ -20,6 +20,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 200px;
+  transition: background 0.5s;
 }
 .nav-bar .brand {
   cursor: pointer;
@@ -45,7 +46,7 @@
 }
 
 .hero-wrap {
-  background: url(audience-band-concert-1105666.1714cc45.jpg) center center/cover no-repeat;
+  background: url(https://i.postimg.cc/15D8xLCn/audience-band-concert-1105666.jpg) center center/cover no-repeat;
   height: 700px;
   display: flex;
   justify-content: center;
@@ -111,10 +112,42 @@
   width: 350px;
   height: 350px;
   margin: 15px;
+  position: relative;
+  cursor: pointer;
 }
 .albums-wrap .albums .album img {
   width: 100%;
   height: 100%;
+}
+.albums-wrap .albums .album .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  opacity: 1;
+  display: none;
+  transition: all 0.5s;
+}
+.albums-wrap .albums .album .overlay:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.albums-wrap .albums .album .overlay .content {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.albums-wrap .albums .album .overlay .content h1 {
+  margin: 5px;
+}
+.albums-wrap .albums .album .overlay .content p {
+  color: lightgray;
+  margin-top: 0;
+}
+.albums-wrap .albums .album .overlay .content a {
+  color: #1db954;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .footer-wrap {

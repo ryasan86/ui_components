@@ -7,7 +7,7 @@
 }
 
 .nav-bar {
-  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
   color: white;
   position: fixed;
   width: 100%;
@@ -16,6 +16,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 200px;
+  transition: background 0.5s;
   .brand {
     cursor: pointer;
     padding: 8px 0;
@@ -41,8 +42,8 @@
 }
 
 .hero-wrap {
-  background: url(https://i.postimg.cc/15D8xLCn/audience-band-concert-1105666.jpg) center
-    center/cover no-repeat;
+  background: url(https://i.postimg.cc/15D8xLCn/audience-band-concert-1105666.jpg)
+    center center/cover no-repeat;
   height: 700px;
   display: flex;
   justify-content: center;
@@ -107,9 +108,42 @@
       width: 350px;
       height: 350px;
       margin: 15px;
+      position: relative;
+      cursor: pointer;
       img {
         width: 100%;
         height: 100%;
+      }
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: white;
+        opacity: 1;
+        display: none;
+        transition: all 0.5s;
+        &:hover {
+          background: rgba(0, 0, 0, 0.6);
+        }
+        .content {
+          width: 100%;
+          height: 100%;
+          @extend %extend_flex;
+          flex-direction: column;
+          h1 {
+            margin: 5px;
+          }
+          p {
+            color: lightgray;
+            margin-top: 0;
+          }
+          a {
+            color: $primary;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+            font-weight: 600;
+          }
+        }
       }
     }
   }
