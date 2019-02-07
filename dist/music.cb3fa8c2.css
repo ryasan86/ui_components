@@ -1,0 +1,161 @@
+.hero-wrap .hero-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.nav-bar {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 200px;
+}
+.nav-bar .brand {
+  cursor: pointer;
+  padding: 8px 0;
+}
+.nav-bar ul {
+  display: flex;
+}
+.nav-bar ul li {
+  margin: 0 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.nav-bar ul li.divider {
+  height: 15px;
+  border: 1px solid white;
+}
+.nav-bar ul li.profile {
+  display: flex;
+}
+.nav-bar ul li.profile .icon {
+  margin: 0 8px;
+}
+
+.hero-wrap {
+  background: url(audience-band-concert-1105666.1714cc45.jpg) center center/cover no-repeat;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+}
+.hero-wrap .hero-text-container {
+  flex-direction: column;
+  width: 80%;
+  color: white;
+  text-align: center;
+}
+.hero-wrap .hero-text-container h1 {
+  font-size: 5em;
+  margin: 20px;
+}
+.hero-wrap .hero-text-container h2 {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.hero-wrap .hero-text-container button {
+  background: #1db954;
+  color: white;
+  margin: 20px;
+}
+.hero-wrap .hero-text-container button:hover {
+  background: #1ed760;
+}
+
+.albums-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 30px 100px 30px;
+}
+.albums-wrap .row {
+  text-align: center;
+  padding: 50px;
+}
+.albums-wrap .row h1 {
+  font-size: 2.8em;
+  margin: 0;
+}
+.albums-wrap .row p {
+  font-size: 1.1em;
+}
+.albums-wrap .row button {
+  background: transparent;
+  border: 3px solid #616467;
+  color: #616467;
+  font-size: 1.1em;
+}
+.albums-wrap .row button:hover {
+  background: #616467;
+  color: white;
+}
+.albums-wrap .albums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1350px;
+}
+.albums-wrap .albums .album {
+  width: 350px;
+  height: 350px;
+  margin: 15px;
+}
+.albums-wrap .albums .album img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-wrap {
+  height: 500px;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 120px;
+}
+.footer-wrap .footer-links {
+  display: flex;
+  margin: 0;
+}
+.footer-wrap .footer-links > li {
+  margin: 0 40px;
+}
+.footer-wrap .footer-links > li h5 {
+  margin: 0;
+  color: gray;
+  font-weight: 800;
+}
+.footer-wrap .footer-links > li ul {
+  color: white;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.footer-wrap .footer-links > li ul li {
+  text-align: left;
+  margin: 12px 0;
+  cursor: pointer;
+}
+.footer-wrap .social i {
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  background: #616467;
+  margin: 0 8px;
+}
+
+.link:hover {
+  color: #1db954;
+  cursor: pointer;
+}
