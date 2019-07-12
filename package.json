@@ -10,7 +10,7 @@
     "sass": "^1.17.0"
   },
   "scripts": {
-    "start": "parcel *.html",
+    "start": "parcel *.html watch",
     "build": "parcel build index.html"
   }
 }
