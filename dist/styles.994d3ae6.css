@@ -49,6 +49,7 @@ body {
   width: 10px;
   height: 302px;
   background: #9d0229;
+  background: linear-gradient(to left, #9d0229 1%, #9d0229 10%, #72021e 11%, #72021e 20%, #9d0229 21%, #9d0229 30%, #72021e 31%, #72021e 40%, #9d0229 41%, #9d0229 50%, #9d0229 51%, #9d0229 60%, #72021e 61%, #72021e 70%, #9d0229 71%, #9d0229 80%, #72021e 81%, #72021e 90%, #9d0229 91%, #9d0229 100%);
   position: absolute;
   top: -1px;
   right: 25px;

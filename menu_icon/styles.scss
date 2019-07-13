@@ -1,0 +1,60 @@
+@mixin stripe {
+  width: 75px;
+  height: 8px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  height: 500px;
+  width: 500px;
+  background: #3faf82;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  position: relative;
+
+  .stripe {
+    @include stripe();
+    position: relative;
+
+    &:before {
+      @include stripe();
+      content: '';
+      position: absolute;
+      transform: translateY(-20px);
+    }
+
+    &:after {
+      @include stripe();
+      content: '';
+      position: absolute;
+      transform: translateY(20px);
+    }
+  }
+}
