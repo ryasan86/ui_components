@@ -28,7 +28,7 @@ body {
   height: 300px;
   width: 200px;
   color: white;
-  background: linear-gradient(45deg, #333333 0%, #3d3d3d 50%, #4f4f4f 75%, #5b5b5b 90%, #6d6d6d 100%);
+  background: linear-gradient(45deg, #333 0%, #3d3d3d 50%, #4f4f4f 75%, #5b5b5b 90%, #6d6d6d 100%);
   border-radius: 2px 4px 4px 2px;
   position: relative;
   box-shadow: -2px 3px 5px gray;
@@ -38,10 +38,11 @@ body {
   width: 15px;
   height: 100%;
   position: absolute;
-  left: 3px;
-  border-radius: 3px 0 0 3px;
+  left: 2px;
+  border-radius: 2px 0 0 2px;
   box-shadow: -10px 0 10px -10px inset #333;
-  background: linear-gradient(to right, #494949 0%, #494949 45%, #333 46%, #333 100%);
+  background: linear-gradient(to right, #494949 0%, #494949 45%, #3a3a3a 46%, #3a3a3a 100%);
+  filter: blur(0.7px);
 }
 .book:after {
   content: "";
