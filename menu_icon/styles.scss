@@ -4,6 +4,7 @@
   background: white;
   border-radius: 3px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.5s linear;
 }
 
 *,
@@ -40,21 +41,104 @@ body {
   position: relative;
 
   .stripe {
+    // stripe 2
     @include stripe();
     position: relative;
+    animation: stripe2Reverse 0.7s cubic-bezier(0.61, 0, 0.4, 1);
 
+    // stripe 1
     &:before {
       @include stripe();
       content: '';
       position: absolute;
       transform: translateY(-20px);
+      animation: stripe1Reverse 0.7s cubic-bezier(0.61, 0, 0.4, 1);
     }
 
+    // stripe 3
     &:after {
       @include stripe();
       content: '';
       position: absolute;
       transform: translateY(20px);
+      animation: stripe3Reverse 0.7s cubic-bezier(0.61, 0, 0.4, 1);
     }
+
+    &.active {
+      animation: stripe2Forward 0.7s cubic-bezier(0.61, 0, 0.4, 1) forwards;
+
+      &:before {
+        animation: stripe1Forward 0.7s cubic-bezier(0.61, 0, 0.4, 1) forwards;
+      }
+
+      &:after {
+        animation: stripe3Forward 0.7s cubic-bezier(0.61, 0, 0.4, 1) forwards;
+      }
+    }
+  }
+}
+
+// forward animation
+@keyframes stripe1Forward {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes stripe2Forward {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes stripe3Forward {
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// reverse animation
+@keyframes stripe1Reverse {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes stripe2Reverse {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes stripe3Reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(20px)
   }
 }
