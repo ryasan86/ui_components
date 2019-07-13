@@ -1,7 +1,6 @@
 const menu = document.querySelector('.menu');
-const stripe = document.querySelector('.stripe');
-
+const stripes = document.querySelectorAll('.stripe');
 
 menu.addEventListener('click', () => {
-    stripe.classList.toggle('active');
-})
+  stripes.forEach(stripe => stripe.classList.toggle('active'));
+});

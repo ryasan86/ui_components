@@ -106,9 +106,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"menu_icon/script.js":[function(require,module,exports) {
 var menu = document.querySelector('.menu');
-var stripe = document.querySelector('.stripe');
+var stripes = document.querySelectorAll('.stripe');
 menu.addEventListener('click', function () {
-  stripe.classList.toggle('active');
+  stripes.forEach(function (stripe) {
+    return stripe.classList.toggle('active');
+  });
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
