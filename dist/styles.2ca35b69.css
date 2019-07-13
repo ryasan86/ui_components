@@ -31,7 +31,8 @@ body {
   height: 48px;
   position: relative;
 }
-.menu .stripe {
+
+.stripe {
   width: 75px;
   height: 8px;
   background: white;
@@ -41,94 +42,24 @@ body {
   position: relative;
   animation: stripe2Reverse 0.7s cubic-bezier(0.61, 0, 0.4, 1);
 }
-.menu .stripe:before {
-  width: 75px;
-  height: 8px;
-  background: white;
-  border-radius: 3px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
-  transition: all 0.5s linear;
+.stripe:before {
   content: "";
   position: absolute;
   transform: translateY(-20px);
   animation: stripe1Reverse 0.7s cubic-bezier(0.61, 0, 0.4, 1);
 }
-.menu .stripe:after {
-  width: 75px;
-  height: 8px;
-  background: white;
-  border-radius: 3px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
-  transition: all 0.5s linear;
+.stripe:after {
   content: "";
   position: absolute;
   transform: translateY(20px);
   animation: stripe3Reverse 0.7s cubic-bezier(0.61, 0, 0.4, 1);
 }
-.menu .stripe.active {
+.stripe.active {
   animation: stripe2Forward 0.7s cubic-bezier(0.61, 0, 0.4, 1) forwards;
 }
-.menu .stripe.active:before {
+.stripe.active:before {
   animation: stripe1Forward 0.7s cubic-bezier(0.61, 0, 0.4, 1) forwards;
 }
-.menu .stripe.active:after {
+.stripe.active:after {
   animation: stripe3Forward 0.7s cubic-bezier(0.61, 0, 0.4, 1) forwards;
-}
-
-@keyframes stripe1Forward {
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
-}
-@keyframes stripe2Forward {
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: rotate(45deg);
-  }
-}
-@keyframes stripe3Forward {
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes stripe1Reverse {
-  0% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-@keyframes stripe2Reverse {
-  0% {
-    transform: rotate(45deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes stripe3Reverse {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(20px);
-  }
 }
