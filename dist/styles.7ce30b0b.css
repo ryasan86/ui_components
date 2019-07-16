@@ -1,0 +1,90 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Courier New", "Courier", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #2947ce 0%, #45bee0 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: -10;
+}
+
+.text-container {
+  color: white;
+  position: relative;
+}
+.text-container .text {
+  margin: 0 0 10px 0;
+  padding: 0;
+  text-transform: uppercase;
+  line-height: 0.6;
+}
+.text-container .text.big {
+  font-size: 80px;
+  font-weight: 600;
+}
+.text-container .text.small {
+  font-size: 24px;
+}
+.text-container .text:last-child {
+  margin: 0;
+}
+
+.numbers {
+  display: flex;
+  position: relative;
+  width: 200px;
+}
+.numbers .one {
+  width: 25px;
+  height: 100px;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+.numbers .one:before {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 25px;
+  height: 50px;
+  top: 0;
+  left: -20px;
+  border-radius: 5px;
+  transform: rotate(50deg);
+  z-index: -1;
+}
+.numbers .zero {
+  width: 100px;
+  height: 100px;
+  border: 25px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8);
+  position: absolute;
+}
+.numbers .zero.zero-1 {
+  right: 87px;
+  z-index: -1;
+}
+.numbers .zero.zero-2 {
+  right: 0;
+  z-index: -2;
+}
