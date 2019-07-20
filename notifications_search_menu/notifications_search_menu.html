@@ -6,17 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Notifications, Search and Menu</title>
     <link rel="stylesheet" href="./styles.scss" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <div class="frame">
-      <div class="center">
-        <div class="notifications">
-          <div class="header">
-            <div class="menu-btn"></div>
-            <div class="search-icon"></div>
-          </div>
-          <div class="body"></div>
+      <div class="notifications-wrap">
+        <div class="header">
+          <i class="fa fa-bars action-icon"></i>
+          <span class="title">Notifications</span>
+          <i class="fa fa-search action-icon"></i>
+        </div>
+        <div class="body">
+          <div class="vertical-bar"></div>
+          <ul class="notifications-list">
+            <li class="notifications-item item-1">
+              <span class="time">9:24 AM</span>
+              <span class="text"
+                ><b>John Walker</b> posted a photo on your wall.</span
+              >
+            </li>
+            <li class="notifications-item item-2">
+              <span class="time">8:19 AM</span
+              ><span class="text"
+                ><b>Alice Parker</b> commented your last post.</span
+              >
+            </li>
+            <li class="notifications-item item-3">
+              <span class="time">Yesterday</span
+              ><span class="text"><b>Luke Wayne</b> added you as friend.</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

@@ -2,6 +2,23 @@
 
 $dark-blue: #274056;
 $light-blue: #5e97cd;
+$light-gray: #dddcdc;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
 
 .frame {
   position: absolute;
@@ -14,23 +31,133 @@ $light-blue: #5e97cd;
   border-radius: 2px;
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background: #fff;
-  color: #333;
+  background: $dark-blue;
   font-family: 'Open Sans', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.action-icon {
+  cursor: pointer;
 }
 
-.notifications {
-  outline: 1px solid red;
+.notifications-wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 300px;
   height: 300px;
   border-radius: 2px;
+  color: white;
+}
+
+.header {
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: $light-blue;
+  padding: 0 20px;
+
+  .title {
+    font-weight: bold;
+  }
+}
+
+$body-left-offset: 30px;
+$item-left-offset: 15px;
+
+.body {
+  height: 80%;
+  width: 100%;
+  background: white;
+  position: relative;
+
+  .vertical-bar {
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background: $light-gray;
+    left: calc(#{$body-left-offset} - 3px);
+  }
+
+  .notifications-list {
+    width: calc(100% - #{$body-left-offset});
+    height: 100%;
+    color: gray;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 0;
+    position: relative;
+    left: $body-left-offset;
+  }
+}
+
+.notifications-item {
+  position: relative;
+  margin-bottom: 20px;
+  height: 55px;
+  animation: fade-up 0.5s ease-out;
+  transform: translateY(100%);
+  opacity: 0;
+  animation-fill-mode: forwards;
+  
+  @for $i from 1 through 3 {
+    &.item-#{$i} {
+      animation-delay: #{$i / 4}s;
+    }
+  }
+
+  .time {
+    display: block;
+    position: relative;
+    margin-left: 15px;
+    font-size: 12px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      left: calc(-12px - #{$item-left-offset});
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      border: 4px solid $light-blue;
+      background: white;
+      left: calc(-12px - #{$item-left-offset});
+      top: 50%;
+      transform: translateY(-50%) scale(0.6);
+    }
+  }
+
+  .text {
+    margin-left: $item-left-offset;
+    display: block;
+    font-size: 15px;
+    padding-right: 20px;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
