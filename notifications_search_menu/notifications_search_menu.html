@@ -15,9 +15,13 @@
     <div class="frame">
       <div class="notifications-wrap active">
         <div class="header">
-          <i class="fa fa-bars menu-icon action-icon"></i>
+          <i class="menu-icon action-icon">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+          </i>
           <span class="title">Notifications</span>
-          <i class="fa fa-search action-icon"></i>
+          <i class="fa fa-search search-icon action-icon"></i>
+          <input class="search-input" type="text" placeholder="Search ..." />
         </div>
         <div class="body">
           <div class="vertical-bar"></div>
@@ -41,7 +45,15 @@
           </ul>
         </div>
       </div>
-      <div class="menu-wrap"></div>
+      <div class="menu-wrap">
+        <ul>
+          <li><span class="fa fa-dashboard"></span>Dashboard</li>
+          <li><span class="fa fa-user"></span>Profile</li>
+          <li><span class="fa fa-bell"></span>Notifications</li>
+          <li><span class="fa fa-comments"></span>Messages</li>
+          <li><span class="fa fa-gear"></span>Settings</li>
+        </ul>
+      </div>
     </div>
 
     <script src="./script.js"></script>
