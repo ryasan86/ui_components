@@ -30,6 +30,9 @@ body {
   margin-left: -200px;
   border-radius: 2px;
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   background: $dark-blue;
   font-family: 'Open Sans', Helvetica, sans-serif;
@@ -45,11 +48,18 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0, -50%);
   width: 300px;
   height: 300px;
   border-radius: 2px;
   color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease-in;
+  z-index: 2;
+
+  &.active {
+    transform: translate(-50%, -50%);
+  }
 }
 
 .header {
@@ -99,11 +109,11 @@ $item-left-offset: 15px;
   position: relative;
   margin-bottom: 20px;
   height: 55px;
-  animation: fade-up 0.5s ease-out;
+  animation: fade-up 0.5s ease-out both;
   transform: translateY(100%);
   opacity: 0;
-  animation-fill-mode: forwards;
-  
+  cursor: pointer;
+
   @for $i from 1 through 3 {
     &.item-#{$i} {
       animation-delay: #{$i / 4}s;
@@ -148,6 +158,23 @@ $item-left-offset: 15px;
     display: block;
     font-size: 15px;
     padding-right: 20px;
+  }
+
+  &:hover {
+    color: $light-blue;
+  }
+}
+
+.menu-wrap {
+  width: 200px;
+  height: 275px;
+  background: white;
+  transform: translateX(25%);
+  transition: all 0.4s ease-in;
+  z-index: 1;
+
+  &.active {
+    transform: translateX(-25%);
   }
 }
 
